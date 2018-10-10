@@ -14,8 +14,7 @@ function deleteNote(e) {
 function changeContent(e) {
     var noteID = e.target.parentElement.parentElement.id;
     var newContent = e.target.value;
-    // changeNoteListContent(noteID,newContent);
-    alert(newContent);
+    changeNoteListContent(noteID,newContent);
 }
 
     

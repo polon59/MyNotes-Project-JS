@@ -11,7 +11,6 @@ function addToNotelist(note) {
 function removeFromNoteList(noteID) {
     notesList.forEach(element => {
         if (element.id == noteID) {
-            // delete notesList[notesList.indexOf(element)];
             notesList.splice(notesList.indexOf(element),1);
         }
     });
@@ -40,4 +39,13 @@ function generateID() {
             id++;
         }
     }
+}
+
+
+function changeNoteListContent(noteID,newContent) {
+    notesList.forEach(element => {
+        if (element.id == noteID) {
+            element.content = newContent;
+        }
+    });
 }
