@@ -1,12 +1,18 @@
 function displayNote(note) {
+    var title = "new Title"
 
+}
+
+
+
+function render(title,content) {
     `<div class="note">
         <div class="panel-heading" draggable="true">
-            <h3 class="noteTitle">${note.title}</h3>
+            <h3 class="noteTitle">${title}</h3>
             <div class="deleteButton">
                 <button>X</button>
             </div>
         </div>
-    <div><textarea>${note.content}</textarea></div>
-</div>`;
+        <div><textarea>${content}</textarea></div>
+    </div>`;
 }

@@ -1,3 +1,7 @@
+body{
+    width: 100%;
+}
+
 .notepadImage img{
     width: 140px;
     height: 100px;
@@ -5,6 +9,28 @@
 
 
 .note{
-    max-width: 25%;
+    display:table;
+    width: 20%;
+    padding: 5px;
     background-color: gray;
+    
+}
+
+.notePanel{
+    width: 100%;
+    display: inline-block;
+}
+
+.title{
+    max-width: 80%;
+    margin: 4px;
+    float: left;
+}
+
+.deleteButton{
+    float: right;
+}
+
+.content{
+    width: 98%;
 }
