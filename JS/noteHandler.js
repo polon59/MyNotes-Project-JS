@@ -1,10 +1,16 @@
 var notesList = [];
 
-//fill notes list
+function fillNoteListFromLS() {
+    notesList = JSON.parse(localStorage.getItem("notesList"));
+    displayNotesFromList(notesList);
+}
+
+function saveNotesListInLS() {
+    localStorage.setItem("notesList", JSON.stringify(notesList));
+}
 
 function addToNotelist(note) {
     notesList.push(note);
-    console.log(notesList);
 }
 
 
@@ -14,7 +20,6 @@ function removeFromNoteList(noteID) {
             notesList.splice(notesList.indexOf(element),1);
         }
     });
-    console.log(notesList);
 }
 
 

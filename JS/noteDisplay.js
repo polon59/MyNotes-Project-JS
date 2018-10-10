@@ -4,11 +4,11 @@ function displayNote(note) {
     var id = note.id;
     var htmlString = render(title,content,id);
 
-    appendNewNote(htmlString);
+    appendNewElement(htmlString);
 }
 
 
-function appendNewNote(htmlString) {
+function appendNewElement(htmlString) {
     var newNote = document.createElement('div');
     var element = document.getElementById("noteContainer");
 
@@ -26,4 +26,11 @@ function render(title,content,id) {
         </div>
         <textarea onchange="changeContent(event)" class="content">${content}</textarea>
     </div>`
+}
+
+
+function displayNotesFromList(notesList) {
+    notesList.forEach(note => {
+        displayNote(note);
+    });
 }
