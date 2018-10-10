@@ -1,6 +1,6 @@
 function displayNote(note) {
-    var title = "new Title";
-    var content = "new Content";
+    var title = note.title;
+    var content = note.content;
     var htmlString = render(title,content);
 
     appendNewNote(htmlString);
@@ -15,7 +15,6 @@ function appendNewNote(htmlString) {
     element.appendChild(newNote);
 }
 
-// duuuuuuuap pad  asddasd
 
 function render(title,content) {
 

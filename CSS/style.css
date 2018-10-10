@@ -9,9 +9,11 @@ body{
 
 
 .note{
+    float: left;
     display:table;
     width: 20%;
     padding: 5px;
+    margin: 5px;
     background-color: gray;
     
 }
