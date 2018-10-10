@@ -54,3 +54,14 @@ function changeNoteListContent(noteID,newContent) {
         }
     });
 }
+
+
+function changeNoteListTitle(noteID,newTitle) {
+
+    notesList.forEach(element => {
+        if (noteID==element.id) {
+            element.title = newTitle;
+            console.log(notesList)
+        }
+    });
+}

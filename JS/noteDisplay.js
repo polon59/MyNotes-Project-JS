@@ -18,10 +18,13 @@ function appendNewElement(htmlString) {
 
 
 function render(title,content,id) {
+//<textarea onchange="changeTitle(event)" class="title">${title}</textarea>
 
     return `<div class="note" id ="${id}">
         <div class="notePanel">
-            <h2 class="title" contenteditable="true">${title}</h2>
+            <h2 class="title" contenteditable="true" oninput="changeTitle(event)">${title}</h2>
+            
+            
             <button class="deleteButton" onclick="deleteNote(event)">X</button>
         </div>
         <textarea onchange="changeContent(event)" class="content">${content}</textarea>
@@ -32,5 +35,6 @@ function render(title,content,id) {
 function displayNotesFromList(notesList) {
     notesList.forEach(note => {
         displayNote(note);
+        alert(note.title);
     });
 }

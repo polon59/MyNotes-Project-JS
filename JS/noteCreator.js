@@ -22,4 +22,12 @@ function changeContent(e) {
     saveNotesListInLS();
 }
 
+
+function changeTitle(e) {
+    var noteID = e.target.parentElement.parentElement.id;
+    var newTitle = e.target.innerHTML;
+    changeNoteListTitle(noteID,newTitle);
+    saveNotesListInLS();
+}
+
     
