@@ -6,7 +6,8 @@ function createNote() {
 
 function deleteNote(e) {
     e.target.closest('.note').remove();
-    removeFromNoteList(e.target.id);
+    var noteID = e.target.parentElement.parentElement.id;
+    removeFromNoteList(noteID);
 }
 
     
