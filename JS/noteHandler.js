@@ -4,11 +4,40 @@ var notesList = [];
 
 function addToNotelist(note) {
     notesList.push(note);
+    console.log(notesList);
 }
 
 
-function removeFromNoteList(note) {
-    var index = notesList.indexOf(note);
-    notesList = notesList.splice(index,index+1);
-    notesList = _.without(notesList,note);
+function removeFromNoteList(noteID) {
+    notesList.forEach(element => {
+        alert(element.id + "  " + noteID);
+        if (element.id == noteID) {
+            notesList.splice(indexOf(element));
+        }
+    });
+    console.log(notesList);
+}
+
+
+function getListOfIDs() {
+    var idList = [];
+    notesList.forEach(element => {
+        idList.push(element.id);
+    });
+    return idList;
+}
+
+
+function generateID() {
+    var id = 0;
+    var isUnique = false;
+    var idList = getListOfIDs();
+
+    while(!isUnique){
+        if (idList.indexOf(id) == -1) {
+            return id;
+        } else {
+            id++;
+        }
+    }
 }

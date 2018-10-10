@@ -1,7 +1,8 @@
 function displayNote(note) {
     var title = note.title;
     var content = note.content;
-    var htmlString = render(title,content);
+    var id = note.id;
+    var htmlString = render(title,content,id);
 
     appendNewNote(htmlString);
 }
@@ -16,9 +17,9 @@ function appendNewNote(htmlString) {
 }
 
 
-function render(title,content) {
+function render(title,content,id) {
 
-    return `<div class="note">
+    return `<div class="note" id ="${id}">
         <div class="notePanel">
             <h2 class="title" contenteditable="true">${title}</h2>
             <button class="deleteButton" onclick="deleteNote(event)">X</button>
