@@ -10,4 +10,12 @@ function deleteNote(e) {
     removeFromNoteList(noteID);
 }
 
+
+function changeContent(e) {
+    var noteID = e.target.parentElement.parentElement.id;
+    var newContent = e.target.value;
+    // changeNoteListContent(noteID,newContent);
+    alert(newContent);
+}
+
     

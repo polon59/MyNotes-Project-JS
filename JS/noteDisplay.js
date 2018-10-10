@@ -24,6 +24,6 @@ function render(title,content,id) {
             <h2 class="title" contenteditable="true">${title}</h2>
             <button class="deleteButton" onclick="deleteNote(event)">X</button>
         </div>
-        <textarea class="content">${content}</textarea>
+        <textarea onchange="changeContent(event)" class="content">${content}</textarea>
     </div>`
 }
