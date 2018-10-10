@@ -35,6 +35,5 @@ function render(title,content,id) {
 function displayNotesFromList(notesList) {
     notesList.forEach(note => {
         displayNote(note);
-        alert(note.title);
     });
 }
