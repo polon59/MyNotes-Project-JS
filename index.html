@@ -6,25 +6,31 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-
 <body>
 
-<div class="container">
-    <h1>Note pad</h1>
-</div>
-
-<div>
-    <img src="resources/notepadIcon.jpg" alt="icon">
-</div>
+    <div class="notepadImage" ondblclick="addNote()">
+        <img src="resources/notepadIcon.jpg" alt="icon">
+    </div>
 
 
+    <div class="noteContainer">
 
-<script type="module" src="js/App.js"></script>
+        <div class="note">
+                <div class="panel-heading">
+                       <h2 class="title" contenteditable="true">Title</h2>
+                    <div class="deleteButton">
+                        <button>X</button>
+                    </div>
+                </div>
+            <div><textarea>content</textarea></div>
+        </div>
 
-<!-- Bootstrap core JavaScript
-        ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src=""></script>
+    </div>
 
+
+    <script src="/JS/noteHandler.js"></script>
+    <script src="/JS/noteCreator.js"></script>
+    <script src="/JS/noteDisplay.js"></script>
+    
 </body>
 </html>

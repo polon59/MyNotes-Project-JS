@@ -1,0 +1,10 @@
+.notepadImage img{
+    width: 140px;
+    height: 100px;
+}
+
+
+.note{
+    max-width: 25%;
+    background-color: gray;
+}
