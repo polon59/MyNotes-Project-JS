@@ -3,26 +3,27 @@ function displayNote(note) {
     var content = "new Content";
     var htmlString = render(title,content);
 
-
-
-    var newNote = document.createElement('div');
-    newNote.innerHTML = htmlString.trim();
-
-
-    var element = document.getElementById("noteContainer");
-    element.appendChild(newNote);
+    appendNewNote(htmlString);
 }
 
 
+function appendNewNote(htmlString) {
+    var newNote = document.createElement('div');
+    var element = document.getElementById("noteContainer");
+
+    newNote.innerHTML = htmlString.trim();
+    element.appendChild(newNote);
+}
+
+// duuuuuuuap pad  asddasd
 
 function render(title,content) {
+
     return `<div class="note">
-        <div class="panel-heading" draggable="true">
-            <h3 class="noteTitle">${title}</h3>
-            <div class="deleteButton">
-                <button>X</button>
-            </div>
+        <div class="notePanel">
+            <h2 class="title" contenteditable="true">${title}</h2>
+            <button class="deleteButton">X</button>
         </div>
-        <div><textarea>${content}</textarea></div>
-    </div>`;
+        <textarea class="content">${content}</textarea>
+    </div>`
 }
