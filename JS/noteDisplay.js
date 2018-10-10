@@ -21,7 +21,7 @@ function render(title,content) {
     return `<div class="note">
         <div class="notePanel">
             <h2 class="title" contenteditable="true">${title}</h2>
-            <button class="deleteButton">X</button>
+            <button class="deleteButton" onclick="deleteNote(event)">X</button>
         </div>
         <textarea class="content">${content}</textarea>
     </div>`
