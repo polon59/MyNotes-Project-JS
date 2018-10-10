@@ -10,9 +10,9 @@ function addToNotelist(note) {
 
 function removeFromNoteList(noteID) {
     notesList.forEach(element => {
-        alert(element.id + "  " + noteID);
         if (element.id == noteID) {
-            notesList.splice(indexOf(element));
+            // delete notesList[notesList.indexOf(element)];
+            notesList.splice(notesList.indexOf(element),1);
         }
     });
     console.log(notesList);

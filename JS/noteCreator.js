@@ -6,7 +6,7 @@ function createNote() {
 
 function deleteNote(e) {
     e.target.closest('.note').remove();
-    removeFromNoteList(e.id);
+    removeFromNoteList(e.target.id);
 }
 
     
