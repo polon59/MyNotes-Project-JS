@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <title>Note pad JS</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
 </head>
 
 <body>
 
-    <div class="notepadImage" ondblclick="createNote()">
-        <img src="resources/notepadIcon.jpg" alt="icon">
+    <div class="navbar">
+        <ul>
+            <li><h1>Notepad</h1></li>
+            <li><img class="notepadImage" src="resources/notepadIcon.png" ondblclick="createNote()" alt="icon"></li>
+        </ul>
     </div>
 
-
-    <div id="noteContainer" class="noteContainer">
-
-        <!-- <div class="note">
-            <div class="notePanel">
-                <h2 class="title" contenteditable="true">fsd</h2>
-                <button class="deleteButton" onclick="deleteNote(event)">X</button>
-            </div>
-            <textarea onchange="changeContent(event)" class="content">content</textarea>
-        </div> -->
-
-
-
-    </div>
-
-
+    <section class="main">
+        
+       
     
-    <script src="./JS/noteHandler.js"></script>
-    <script src="./JS/noteDisplay.js"></script>
-    <script src="./JS/noteCreator.js"></script>
+    
+        <div id="noteContainer" class="noteContainer">
+    
+            <div class="note">
+                <div class="notePanel">
+                    <h2 class="title" contenteditable="true">fsd</h2>
+                    <button class="deleteButton" onclick="deleteNote(event)"><img src="resources/delete.png" alt=""></button>
+                </div>
+                <textarea onchange="changeContent(event)" class="content">content</textarea>
+            </div>
+    
+        </div>
+    
+    
+        
+        <script src="./JS/noteHandler.js"></script>
+        <script src="./JS/noteDisplay.js"></script>
+        <script src="./JS/noteCreator.js"></script>
+
+    </section>
+
     
 </body>
 </html>

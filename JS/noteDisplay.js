@@ -18,14 +18,10 @@ function appendNewElement(htmlString) {
 
 
 function render(title,content,id) {
-//<textarea onchange="changeTitle(event)" class="title">${title}</textarea>
-
     return `<div class="note" id ="${id}">
         <div class="notePanel">
-            <h2 class="title" contenteditable="true" oninput="changeTitle(event)">${title}</h2>
-            
-            
-            <button class="deleteButton" onclick="deleteNote(event)">X</button>
+            <h2 class="title" contenteditable="true" oninput="changeTitle(event)">${title}</h2>  
+            <button class="deleteButton" onclick="deleteNote(event)"><img src="resources/delete.png" alt=""></button>
         </div>
         <textarea onchange="changeContent(event)" class="content">${content}</textarea>
     </div>`

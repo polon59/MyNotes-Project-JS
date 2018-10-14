@@ -2,19 +2,29 @@ body{
     width: 100%;
 }
 
-.notepadImage img{
-    width: 140px;
-    height: 100px;
+h2{
+    color: white;
+}
+
+.main{
+    margin-left: 12%;
+}
+
+.notepadImage{
+    width: 10vw;
+    height: 10vw;
 }
 
 
 .note{
     float: left;
     display:table;
-    width: 20%;
+    width: 47%;
     padding: 5px;
     margin: 5px;
-    background-color: gray;
+    border-radius: 5px;
+    background-color: rgb(255, 202, 27);
+    border: 2px solid rgb(0, 0, 0);
     
 }
 
@@ -31,8 +41,19 @@ body{
 
 .deleteButton{
     float: right;
+    border-radius: 3px;
+    height: 20px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+.deleteButton img{
+    width: 100%;
+    height: 100%;
 }
 
 .content{
     width: 98%;
+    min-height: 100px;
+    background-image: url("../resources/textboxBackground.jpg");
 }
