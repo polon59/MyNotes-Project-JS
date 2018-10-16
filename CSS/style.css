@@ -1,13 +1,14 @@
 body{
     width: 100%;
-font-family: LightItalic;
 }
 
-h1{    font-size: 2vw;
-	}
+h1{  font-size: 2vw;
+    font-family: PoppinsBold;
+}
 
 h2{
     color: white;
+    font-family: PoppinsBold;
 }
 
 .main{
@@ -57,13 +58,20 @@ h2{
 }
 
 .content{
+    color: black;
     width: 98%;
     min-height: 100px;
     background-image: url("../resources/textboxBackground.jpg");
+    font-family: PoppinsBold;
 }
 
 
 @font-face {
     font-family: LightItalic;
     src: url("../resources/fonts/Poppins-Thin.ttf");
+}
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url("../resources/fonts/Poppins-Bold.ttf");
 }
