@@ -1,6 +1,10 @@
 body{
     width: 100%;
+font-family: LightItalic;
 }
+
+h1{    font-size: 2vw;
+	}
 
 h2{
     color: white;
@@ -56,4 +60,10 @@ h2{
     width: 98%;
     min-height: 100px;
     background-image: url("../resources/textboxBackground.jpg");
+}
+
+
+@font-face {
+    font-family: LightItalic;
+    src: url("../resources/fonts/Poppins-Thin.ttf");
 }
