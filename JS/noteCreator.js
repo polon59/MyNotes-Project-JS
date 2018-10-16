@@ -10,8 +10,7 @@ function createNote() {
 
 
 function deleteNote(e) {
-    var noteID = e.target.parentElement.parentElement.id;
-
+    var noteID = e.target.parentElement.parentElement.parentElement.id;
     e.target.closest('.note').remove();
     removeFromNoteList(noteID);
     saveNotesListInLS();
