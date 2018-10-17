@@ -1,70 +1,37 @@
-var notesList = [];
+fillNoteListFromLS();
 
+function createNote() {
+    var note = {title:"Add title", content:"add content", id:generateID()};
 
-function fillNoteListFromLS() {
-    notesList = JSON.parse(localStorage.getItem("notesList"));
-    displayNotesFromList(notesList);
+    displayNote(note);
+    addToNotelist(note);
+    saveNotesListInLS();
 }
 
 
-function saveNotesListInLS() {
-    localStorage.setItem("notesList", JSON.stringify(notesList));
+function deleteNote(e) {
+    var noteID = e.target.parentElement.parentElement.parentElement.id;
+    e.target.closest('.note').remove();
+    removeFromNoteList(noteID);
+    saveNotesListInLS();
 }
 
 
-function addToNotelist(note) {
-    notesList.push(note);
+function changeContent(e) {
+    var noteID = e.target.parentElement.id;
+    var newContent = e.target.value;
+
+    changeNoteListContent(noteID,newContent);
+    saveNotesListInLS();
 }
 
 
-function removeFromNoteList(noteID) {
-    notesList.forEach(element => {
-        if (element.id == noteID) {
-            notesList.splice(notesList.indexOf(element),1);
-        }
-    });
+function changeTitle(e) {
+    var noteID = e.target.parentElement.parentElement.id;
+    var newTitle = e.target.innerHTML;
+
+    changeNoteListTitle(noteID,newTitle);
+    saveNotesListInLS();
 }
 
-
-function getListOfIDs() {
-    var idList = [];
     
-    notesList.forEach(element => {
-        idList.push(element.id);
-    });
-    return idList;
-}
-
-
-function generateID() {
-    var id = 0;
-    var isUnique = false;
-    var idList = getListOfIDs();
-
-    while(!isUnique){
-        if (idList.indexOf(id) == -1) {
-            return id;
-        } else {
-            id++;
-        }
-    }
-}
-
-
-function changeNoteListContent(noteID,newContent) {
-    notesList.forEach(element => {
-        if (element.id == noteID) {
-            element.content = newContent;
-        }
-    });
-}
-
-
-function changeNoteListTitle(noteID,newTitle) {
-
-    notesList.forEach(element => {
-        if (noteID==element.id) {
-            element.title = newTitle;
-        }
-    });
-}
